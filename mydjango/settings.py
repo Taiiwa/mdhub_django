@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'mydjango.wsgi.application'
 DATABASES = {
    'default': {
           'ENGINE': 'django.db.backends.mysql', #数据库引擎
-          'NAME': 'md',                       #数据库名
+          'NAME': 'mdhub_beta',                       #数据库名
           'USER': 'root',                       #用户名
-          'PASSWORD': 'root',                   #密码
+          'PASSWORD': 'loveless',                   #密码
           'HOST': '',                           #数据库主机，默认为localhost
           'PORT': '',                           #数据库端口，MySQL默认为3306
           'OPTIONS': {
@@ -120,13 +120,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 #设置跨域
@@ -142,3 +142,6 @@ STATICFILES_DIRS=[
 
 #定义上传文件夹的路径
 UPLOAD_ROOT = os.path.join(BASE_DIR,'static/upload')
+
+
+APPEND_SLASH=False

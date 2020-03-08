@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path
 from django.views.static import serve
-from myapp.views import myindex
+from myapp.views import *
+from myapp.md_user import *
+
 
 urlpatterns = [
     #定义超链接路由
     re_path('^static/upload/(?P<path>.*)$',serve,{'document_root':'/static/upload/'}),
     path('',myindex),
+    path('my_view/', MyView.as_view()),
+    path('register/', Register.as_view()),
+    path('my_code', MyCode.as_view())
 ]
